@@ -1,0 +1,299 @@
+{
+  "Products": [
+    {
+      "id": 1,
+      "descricao": "Bola de meia",
+      "referencia": "A4301-M",
+      "preco": 1250
+    },
+    {
+      "id": 2,
+      "descricao": "Raquete profissional",
+      "referencia": "WV301-K",
+      "preco": 250.6
+    },
+    {
+      "id": 3,
+      "descricao": "Rede de tênis",
+      "referencia": "U1208-C",
+      "preco": 2013.5
+    },
+    {
+      "id": 4,
+      "descricao": "Luvas brancas",
+      "referencia": "C4561-G",
+      "preco": 1008
+    },
+    {
+      "id": 5,
+      "descricao": "Mochila raider",
+      "referencia": "B4390-A",
+      "preco": 50.9
+    },
+    {
+      "id": 6,
+      "descricao": "Produto do form 1",
+      "referencia": "A-TRYY6-C",
+      "preco": "1276.98"
+    },
+    {
+      "id": 7,
+      "descricao": "Produto do form 2",
+      "referencia": "A-TRYY6-d",
+      "preco": "1276.95"
+    }
+  ],
+  "notas": [
+    {
+      "id": 1,
+      "descricao": "Mudar o database desta api para um server db",
+      "grupo": 3
+    },
+    {
+      "Grupo": [
+        {
+          "id": 1,
+          "descricao": "Agenda",
+          "notaId": 3
+        },
+        {
+          "id": 2,
+          "descricao": "Experts",
+          "notaId": 1
+        },
+        {
+          "id": 3,
+          "descricao": "Notas",
+          "notaId": 2
+        },
+        {
+          "id": 4,
+          "descricao": "Contatos",
+          "notaId": 4
+        },
+        {
+          "id": 5,
+          "descricao": "Reality",
+          "notaId": 2
+        }
+      ]
+    },
+    {
+      "Grupo": [
+        {
+          "id": 1,
+          "descricao": "Agenda",
+          "notaId": 3
+        },
+        {
+          "id": 2,
+          "descricao": "Experts",
+          "notaId": 1
+        },
+        {
+          "id": 3,
+          "descricao": "Notas",
+          "notaId": 2
+        },
+        {
+          "id": 4,
+          "descricao": "Contatos",
+          "notaId": 4
+        },
+        {
+          "id": 5,
+          "descricao": "Reality",
+          "notaId": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "descricao": "Subir os arquivos do BBB e organizar junto com a Ju",
+      "grupo": 1
+    },
+    {
+      "Grupo": [
+        {
+          "id": 1,
+          "descricao": "Agenda",
+          "notaId": 3
+        },
+        {
+          "id": 2,
+          "descricao": "Experts",
+          "notaId": 1
+        },
+        {
+          "id": 3,
+          "descricao": "Notas",
+          "notaId": 2
+        },
+        {
+          "id": 4,
+          "descricao": "Contatos",
+          "notaId": 4
+        },
+        {
+          "id": 5,
+          "descricao": "Reality",
+          "notaId": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "descricao": "Dentro de Carlos/Notas tem muitas coisas para organizar",
+      "grupo": 3
+    },
+    {
+      "Grupo": [
+        {
+          "id": 1,
+          "descricao": "Agenda",
+          "notaId": 3
+        },
+        {
+          "id": 2,
+          "descricao": "Experts",
+          "notaId": 1
+        },
+        {
+          "id": 3,
+          "descricao": "Notas",
+          "notaId": 2
+        },
+        {
+          "id": 4,
+          "descricao": "Contatos",
+          "notaId": 4
+        },
+        {
+          "id": 5,
+          "descricao": "Reality",
+          "notaId": 2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "descricao": "Organizar as anotações no caderno e nos papéis em geral",
+      "grupo": 3
+    },
+    {
+      "Grupo": [
+        {
+          "id": 1,
+          "descricao": "Agenda",
+          "notaId": 3
+        },
+        {
+          "id": 2,
+          "descricao": "Experts",
+          "notaId": 1
+        },
+        {
+          "id": 3,
+          "descricao": "Notas",
+          "notaId": 2
+        },
+        {
+          "id": 4,
+          "descricao": "Contatos",
+          "notaId": 4
+        },
+        {
+          "id": 5,
+          "descricao": "Reality",
+          "notaId": 2
+        }
+      ]
+    }
+  ],
+  "Agenda": [
+    {
+      "id": 1,
+      "nome": "Juliana",
+      "origem": "CSI",
+      "telefone": ""
+    },
+    {
+      "id": 2,
+      "nome": "Rafaela Milaceno",
+      "origem": "CSI",
+      "telefone": ""
+    },
+    {
+      "id": 3,
+      "nome": "Brisa",
+      "origem": "CSI",
+      "telefone": ""
+    },
+    {
+      "id": 4,
+      "nome": "Gabi",
+      "origem": "Show de Reality",
+      "telefone": ""
+    },
+    {
+      "id": 5,
+      "nome": "Cesar",
+      "origem": "Show de Reality",
+      "telefone": ""
+    },
+    {
+      "id": 6,
+      "nome": "Fernanda",
+      "origem": "Daily FBI",
+      "telefone": ""
+    },
+    {
+      "id": 7,
+      "nome": "Suzana",
+      "origem": "Guianca Restrito",
+      "telefone": ""
+    },
+    {
+      "id": 8,
+      "nome": "Maria",
+      "origem": "Reality.Guianca",
+      "telefone": ""
+    }
+  ],
+  "Experts": [
+    {
+      "id": 1,
+      "nome": "Macoratti",
+      "titulo": "MVP"
+    },
+    {
+      "id": 2,
+      "nome": "Eduardo Pires",
+      "titulo": "MVP"
+    },
+    {
+      "id": 3,
+      "nome": "Baltieri",
+      "titulo": "MVP"
+    },
+    {
+      "id": 4,
+      "nome": "CarlosAS",
+      "titulo": "MVP"
+    }
+  ],
+  "Reality": [
+    {
+      "id": 1,
+      "nome": "BBB20",
+      "data": "21-01-2020",
+      "evento": "Primeiro papo cabeça dos Biancos / GUianca",
+      "tag": [
+        "guianca",
+        "biancos",
+        "papo cabeça",
+        "bia sozinha"
+      ]
+    }
+  ]
+}
