@@ -4,3 +4,4 @@ export interface Product{
     referencia: string
     preco: number   
 }
+
