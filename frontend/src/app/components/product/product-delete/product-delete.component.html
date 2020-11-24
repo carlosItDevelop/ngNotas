@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-title appRed>Confirma a Exclusão do Produto?</mat-card-title>
+    <hr /><br />
+    <form>
+
+        <mat-form-field>
+            <input matInput disabled placeholder="Descrição" [value]="product.descricao" name="descricao">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput disabled placeholder="Referência" [value]="product.referencia" name="referencia">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput disabled placeholder="Preço (R$)" [value]="product.preco" name="preco">
+        </mat-form-field>
+
+    </form>
+
+    <button mat-raised-button (click)="deleteProduct()" color="warn">
+        Sim
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Não
+    </button>
+
+</mat-card>

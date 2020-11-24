@@ -32,33 +32,15 @@
     },
     {
       "id": 6,
-      "descricao": "Produto do form 1",
+      "descricao": "ProdutoTeste 1",
       "referencia": "A-TRYY6-C",
       "preco": "1276.98"
     },
     {
-      "id": 7,
-      "descricao": "Produto do form 2",
-      "referencia": "A-TRYY6-d",
-      "preco": "1276.95"
-    },
-    {
       "id": 8,
-      "descricao": "Teste novo de Create Product",
+      "descricao": "Teste novo de Update",
       "referencia": "A-09IKJ-V",
       "preco": "1234.89"
-    },
-    {
-      "id": 9,
-      "descricao": "Teste Descrição",
-      "referencia": "D-9878-C",
-      "preco": "1258"
-    },
-    {
-      "id": 10,
-      "descricao": "Descrição 100",
-      "referencia": "A-09IKJ-L",
-      "preco": "504"
     }
   ],
   "reality": [
