@@ -1,8 +1,8 @@
 {
-  "Products": [
+  "products": [
     {
       "id": 1,
-      "descricao": "Bola de meia",
+      "descricao": "Bola de meia Alterado",
       "referencia": "A4301-M",
       "preco": 1250
     },
@@ -41,9 +41,27 @@
       "descricao": "Produto do form 2",
       "referencia": "A-TRYY6-d",
       "preco": "1276.95"
+    },
+    {
+      "id": 8,
+      "descricao": "Teste novo de Create Product",
+      "referencia": "A-09IKJ-V",
+      "preco": "1234.89"
+    },
+    {
+      "id": 9,
+      "descricao": "Teste Descrição",
+      "referencia": "D-9878-C",
+      "preco": "1258"
+    },
+    {
+      "id": 10,
+      "descricao": "Descrição 100",
+      "referencia": "A-09IKJ-L",
+      "preco": "504"
     }
   ],
-  "Reality": [
+  "reality": [
     {
       "id": 1,
       "nome": "BBB20",
@@ -57,22 +75,22 @@
       ]
     }
   ],
-  "Pedido": [
+  "pedido": [
     {
       "id": 1,
       "data": "12/03/2019",
       "clienteId": 1,
-      "itens":[
+      "itens": [
         {
-          "id":1,
+          "id": 1,
           "nome": "CD Novelas",
           "valor": 12.34,
           "pedidoId": 1
         },
         {
-          "id":2,
+          "id": 2,
           "nome": "Revista .Net Core",
-          "valor": 112.90,
+          "valor": 112.9,
           "pedidoId": 1
         }
       ]
@@ -81,7 +99,7 @@
       "id": 2,
       "data": "12/03/2019",
       "clienteId": 2,
-      "itens":[
+      "itens": [
         {
           "id": 3,
           "nome": "CD Filmes",
@@ -91,7 +109,7 @@
         {
           "id": 4,
           "nome": "Revista Xamarim.Forms",
-          "valor": 302.90,
+          "valor": 302.9,
           "pedidoId": 2
         }
       ]

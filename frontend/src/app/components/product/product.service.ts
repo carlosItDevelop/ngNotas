@@ -1,4 +1,4 @@
-import { ProductCreateComponent } from './product-create/product-create.component';
+
 import { Product } from './product.model';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -12,8 +12,8 @@ export class ProductService {
 
   baseUrl = "http://localhost:3001/Products";
 
-  constructor(private snackBar: MatSnackBar, 
-              private http: HttpClient) { }
+  constructor(private snackBar: MatSnackBar,
+    private http: HttpClient) { }
 
   showOnToastr(msg: string): void {
     this.snackBar.open(msg, 'X', {
@@ -32,13 +32,18 @@ export class ProductService {
   }
 
   readById(id: string): Observable<Product> {
-    const url = `${this.baseUrl}/${id}}`
+    const url = `${this.baseUrl}/${id}`
     return this.http.get<Product>(url)
   }
 
   update(product: Product): Observable<Product> {
-    const url = `${this.baseUrl}/${product.id}}`
+    const url = `${this.baseUrl}/${product.id}`
     return this.http.put<Product>(url, product)
+  }
+
+  delete(id: string): Observable<Product> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.delete<Product>(url)
   }
 
 }
