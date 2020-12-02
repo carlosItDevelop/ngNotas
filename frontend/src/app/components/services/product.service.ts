@@ -1,5 +1,5 @@
 
-import { Product } from './product.model';
+import { Product } from '../../models/product.model';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
