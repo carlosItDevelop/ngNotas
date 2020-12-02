@@ -1,9 +1,12 @@
+
+import { Product } from './../../../models/product.model';
 import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
-import { Product } from '../../../models/product.model';
+
+
 
 
 
@@ -37,7 +40,10 @@ const EXAMPLE_DATA: Product[] = [
  * (including sorting, pagination, and filtering).
  */
 export class ProductRead2DataSource extends DataSource<Product> {
+
+ 
   data: Product[] = EXAMPLE_DATA;
+  
   paginator: MatPaginator;
   sort: MatSort;
 
