@@ -41,6 +41,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
+import { MedicoReadComponent } from './components/medico/medico-read/medico-read.component';
+import { MedicoCrudComponent } from './views/medico-crud/medico-crud.component';
+import { MedicoCreateComponent } from './components/medico/medico-create/medico-create.component';
+import { MedicoDeleteComponent } from './components/medico/medico-delete/medico-delete.component';
+import { MedicoUpdateComponent } from './components/medico/medico-update/medico-update.component';
 
 registerLocaleData(localePt);
 
@@ -58,7 +63,12 @@ registerLocaleData(localePt);
     ProductRead2Component,
     ProductUpdateComponent,
     ProductDeleteComponent,
-    DashboardComponent
+    DashboardComponent,
+    MedicoReadComponent,
+    MedicoCrudComponent,
+    MedicoCreateComponent,
+    MedicoDeleteComponent,
+    MedicoUpdateComponent
   ],
   imports: [
     BrowserModule,

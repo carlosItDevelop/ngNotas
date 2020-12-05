@@ -7,6 +7,11 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 
+import { MedicoCrudComponent } from './views/medico-crud/medico-crud.component';
+import { MedicoDeleteComponent } from './components/medico/medico-delete/medico-delete.component';
+import { MedicoUpdateComponent } from './components/medico/medico-update/medico-update.component';
+import { MedicoCreateComponent } from './components/medico/medico-create/medico-create.component';
+
 const routes: Routes = [
   {
     path: "",
@@ -27,6 +32,22 @@ const routes: Routes = [
   {
     path: "products/delete/:id",
     component: ProductDeleteComponent
+  },
+  {
+    path: "medicos",
+    component: MedicoCrudComponent
+  },
+  {
+    path: "medicos/create",
+    component: MedicoCreateComponent
+  },
+  {
+    path: "medicos/update/:id",
+    component: MedicoUpdateComponent
+  },
+  {
+    path: "medicos/delete/:id",
+    component: MedicoDeleteComponent
   }
 ];
 
