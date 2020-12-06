@@ -16,12 +16,12 @@ export class MedicoReadComponent implements OnInit {
 
   medicos: Medico[];
   dataSource: MatTableDataSource<Medico>;
-  displayedColumns: string[] = ['id', 'nome', 'especialidade', 'crm'];
+  displayedColumns: ['id', 'nome', 'especialidade', 'crm', 'action'];
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private medicoService: MedicoService, snackBar: MatSnackBar) { }
+  constructor(private medicoService: MedicoService, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.medicoService.read().subscribe(medicos => {

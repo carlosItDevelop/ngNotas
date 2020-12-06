@@ -1,1 +1,28 @@
-<p>medico-delete works!</p>
+<mat-card>
+    <mat-card-title appRed>Confirma a Exclusão do Médico?</mat-card-title>
+    <hr /><br />
+    <form>
+
+        <mat-form-field>
+            <input matInput disabled placeholder="Nome" [value]="medico.nome" name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput disabled placeholder="Especialidade" [value]="medico.especialidade" name="especialidade">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput disabled placeholder="CRM" [value]="medico.crm" name="crm">
+        </mat-form-field>
+
+    </form>
+
+    <button mat-raised-button (click)="deleteMedico()" color="warn">
+        Sim
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Não
+    </button>
+
+</mat-card>

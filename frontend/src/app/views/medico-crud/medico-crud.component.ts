@@ -13,7 +13,7 @@ export class MedicoCrudComponent implements OnInit {
   constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {
       title: 'Cadastro de Médicos',
-      icon: 'storefront',
+      icon: 'add_to_queue',
       routeUrl: '/medicos'
     }
   }

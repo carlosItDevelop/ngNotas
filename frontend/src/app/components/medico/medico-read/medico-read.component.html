@@ -6,19 +6,19 @@
             <td mat-cell *matCellDef="let row">{{row.id}}</td>
         </ng-container>
 
-        <!-- Descrição Column -->
+        <!-- Nome Column -->
         <ng-container matColumnDef="nome">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
             <td mat-cell *matCellDef="let row">{{row.nome}}</td>
         </ng-container>
 
-        <!-- Referência Column -->
+        <!-- Especialidade Column -->
         <ng-container matColumnDef="especialidade">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Especialidade</th>
             <td mat-cell *matCellDef="let row">{{row.especialidade}}</td>
         </ng-container>
 
-        <!-- Preço Column -->
+        <!-- CRM Column -->
         <ng-container matColumnDef="crm">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>CRM</th>
             <td mat-cell *matCellDef="let row">{{row.crm}}</td>
@@ -27,7 +27,7 @@
         <!-- action Column -->
         <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef>Ações</th>
-            <td mat-cell *matCellDef="let row">
+            <td mat-cell *matCellDef="let med">
                 <a routerLink="/medicos/update/{{ row.id }}" class="edit">
                     <i class="material-icons">
                         edit

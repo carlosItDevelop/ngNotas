@@ -10,12 +10,13 @@ import { Router } from '@angular/router';
 })
 export class MedicoCreateComponent implements OnInit {
 
-  medico: Medico = {
+  medico: Medico = 
+  {
     id: null,
     nome: "",
     especialidade: "",
     crm: ""
-  }
+  };
 
   constructor(private medicoService: MedicoService,
     private router: Router) { }

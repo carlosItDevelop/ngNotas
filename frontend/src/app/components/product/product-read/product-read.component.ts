@@ -23,7 +23,8 @@ export class ProductReadComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private productService: ProductService, snackBar: MatSnackBar) { }
+  constructor(private productService: ProductService, 
+    private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.productService.read().subscribe(products => {

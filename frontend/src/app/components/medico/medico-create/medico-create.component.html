@@ -1,1 +1,28 @@
-<p>medico-create works!</p>
+<mat-card>
+    <mat-card-title class="azul-cooperchip">Adicionar Médico</mat-card-title>
+
+    <form>
+
+        <mat-form-field>
+            <input matInput [(ngModel)]="medico.nome" name="nome" placeholder="Nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Especialidade" [(ngModel)]="medico.especialidade" name="especialidade">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="CRM" [(ngModel)]="medico.crm" name="crm">
+        </mat-form-field>
+
+    </form>
+
+    <button mat-raised-button (click)="createMedico()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Calcelar
+    </button>
+
+</mat-card>
