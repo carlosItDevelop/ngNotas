@@ -18,8 +18,8 @@ export class MedicoReadComponent implements OnInit {
   dataSource: MatTableDataSource<Medico>;
   displayedColumns: ['id', 'nome', 'especialidade', 'crm', 'action'];
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   constructor(private medicoService: MedicoService, private snackBar: MatSnackBar) { }
 

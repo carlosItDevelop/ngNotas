@@ -20,8 +20,8 @@ export class ProductReadComponent implements OnInit {
   dataSource: MatTableDataSource<Product>;
   displayedColumns: string[] = ['id', 'descricao', 'referencia', 'preco', 'action'];
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   constructor(private productService: ProductService, 
     private snackBar: MatSnackBar) { }
