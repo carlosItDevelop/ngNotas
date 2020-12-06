@@ -15,7 +15,7 @@ export class MedicoCrudComponent implements OnInit {
     private headerService: HeaderService) {
     headerService.headerData = {
       title: 'Cadastro de Médicos',
-      icon: 'add_to_queue',
+      icon: 'home_repair_service',
       routeUrl: '/medicos'
     }
   }

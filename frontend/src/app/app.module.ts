@@ -44,10 +44,15 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 import { MedicoReadComponent } from './components/medico/medico-read/medico-read.component';
 import { MedicoCrudComponent } from './components/medico/medico-crud/medico-crud.component';
-
 import { MedicoCreateComponent } from './components/medico/medico-create/medico-create.component';
 import { MedicoDeleteComponent } from './components/medico/medico-delete/medico-delete.component';
 import { MedicoUpdateComponent } from './components/medico/medico-update/medico-update.component';
+
+import { PacienteCrudComponent } from './components/paciente/paciente-crud/paciente-crud.component';
+import { PacienteReadComponent } from './components/paciente/paciente-read/paciente-read.component';
+import { PacienteCreateComponent } from './components/paciente/paciente-create/paciente-create.component';
+import { PacienteUpdateComponent } from './components/paciente/paciente-update/paciente-update.component';
+import { PacienteDeleteComponent } from './components/paciente/paciente-delete/paciente-delete.component';
 
 registerLocaleData(localePt);
 
@@ -69,7 +74,12 @@ registerLocaleData(localePt);
     MedicoCrudComponent,
     MedicoCreateComponent,
     MedicoDeleteComponent,
-    MedicoUpdateComponent
+    MedicoUpdateComponent,
+    PacienteCrudComponent,
+    PacienteReadComponent,
+    PacienteCreateComponent,
+    PacienteUpdateComponent,
+    PacienteDeleteComponent
   ],
   imports: [
     BrowserModule,
