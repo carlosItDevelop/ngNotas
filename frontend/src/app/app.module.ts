@@ -19,9 +19,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './views/home/home.component';
-import { ProductCrudComponent } from './views/product-crud/product-crud.component';
+
 import { RedDirective } from './directives/red.directive';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductCrudComponent } from './components/product/product-crud/product-crud.component';
 
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field'
@@ -42,7 +43,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { MedicoReadComponent } from './components/medico/medico-read/medico-read.component';
-import { MedicoCrudComponent } from './views/medico-crud/medico-crud.component';
+import { MedicoCrudComponent } from './components/medico/medico-crud/medico-crud.component';
+
 import { MedicoCreateComponent } from './components/medico/medico-create/medico-create.component';
 import { MedicoDeleteComponent } from './components/medico/medico-delete/medico-delete.component';
 import { MedicoUpdateComponent } from './components/medico/medico-update/medico-update.component';

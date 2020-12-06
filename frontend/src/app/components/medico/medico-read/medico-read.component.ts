@@ -16,7 +16,7 @@ export class MedicoReadComponent implements OnInit {
 
   medicos: Medico[];
   dataSource: MatTableDataSource<Medico>;
-  displayedColumns: ['id', 'nome', 'especialidade', 'crm', 'action'];
+  displayedColumns: string[] = ['id', 'nome', 'especialidade', 'crm', 'action'];
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
