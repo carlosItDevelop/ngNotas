@@ -26,7 +26,7 @@ export class MedicoDeleteComponent implements OnInit {
 
   deleteMedico(): void {
     this.medicoService.delete(this.medico.id).subscribe(() => {
-      this.medicoService.showMessage('Médico excluído com sucesso!')
+      this.medicoService.showMessage('Médico excluído com sucesso!', true)
       this.router.navigate(['/medicos'])
     })
   }

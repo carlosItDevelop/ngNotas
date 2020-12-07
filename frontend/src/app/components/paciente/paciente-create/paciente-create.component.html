@@ -1,1 +1,28 @@
-<p>paciente-create works!</p>
+<mat-card>
+    <mat-card-title class="azul-cooperchip">Adicionar Paciente</mat-card-title>
+
+    <form>
+
+        <mat-form-field>
+            <input matInput [(ngModel)]="paciente.nome" name="nome" placeholder="Nome do Paciente">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="CPF" [(ngModel)]="paciente.cpf" name="cpf">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Estado do Paciente" [(ngModel)]="paciente.estado" name="estado">
+        </mat-form-field>
+
+    </form>
+
+    <button mat-raised-button (click)="createPaciente()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Calcelar
+    </button>
+
+</mat-card>
