@@ -1,3 +1,4 @@
+import { CoreService } from './../../shared/services/core.service';
 
 import { Product } from '../../models/product.model';
 import { Injectable } from '@angular/core';
@@ -5,6 +6,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
 import { EMPTY, Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
@@ -15,17 +17,11 @@ export class ProductService {
 
   constructor(
     private snackBar: MatSnackBar,
-    private http: HttpClient
+    private http: HttpClient,
+    private coreService: CoreService
   ) { }
 
-  showMessage(msg: string, isError: boolean = false): void {
-    this.snackBar.open(msg, 'X', {
-      duration: 4000,
-      horizontalPosition: "right",
-      verticalPosition: "top",
-      panelClass: isError ? ['msg-error'] : ['msg-success']
-    })
-  }
+
 
   create(product: Product): Observable<Product> {
     return this.http.post<Product>(this.baseUrl, product).pipe(
@@ -67,7 +63,7 @@ export class ProductService {
   }
 
   erroHandler(e: any): Observable<any> {
-    this.showMessage('Ocorreu um erro inesperado!', true)
+    this.coreService.showMessage('Ocorreu um erro inesperado!', true)
     return EMPTY
   }
   

@@ -1,3 +1,4 @@
+import { CoreService } from './../../../shared/services/core.service';
 import { ProductService } from '../../services/product.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../../../models/product.model';
@@ -14,7 +15,8 @@ export class ProductDeleteComponent implements OnInit {
 
   constructor(private router: Router,
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private coreService: CoreService
   ) { }
 
   ngOnInit(): void {
@@ -26,7 +28,7 @@ export class ProductDeleteComponent implements OnInit {
 
   deleteProduct(): void {
     this.productService.delete(this.product.id).subscribe(() => {
-      this.productService.showMessage('Produto excluído com sucesso!', true)
+      this.coreService.showMessage('Produto excluído com sucesso!', true)
       this.router.navigate(['/products'])
     })
   }

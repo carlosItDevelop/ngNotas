@@ -1,3 +1,4 @@
+import { CoreService } from './../../../shared/services/core.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 import { Component, OnInit } from '@angular/core';
@@ -16,7 +17,8 @@ export class ProductUpdateComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private coreService: CoreService
   ) { }
 
   ngOnInit(): void {
@@ -28,7 +30,7 @@ export class ProductUpdateComponent implements OnInit {
 
   updateProduct(): void {
     this.productService.update(this.product).subscribe(() => {
-      this.productService.showMessage('Produto atualizado com sucesso!')
+      this.coreService.showMessage('Produto atualizado com sucesso!')
       this.router.navigate(['/products'])
     })
   }

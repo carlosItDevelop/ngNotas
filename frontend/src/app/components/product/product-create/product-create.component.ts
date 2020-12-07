@@ -1,3 +1,4 @@
+import { CoreService } from './../../../shared/services/core.service';
 
 import { ProductService } from '../../services/product.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,14 +12,6 @@ import { Product } from '../../../models/product.model';
 })
 export class ProductCreateComponent implements OnInit {
 
-  /*
-  product: Product = {
-    id: 10,
-    descricao: "Bola Importada n. 2",
-    referencia: "F-098ik",
-    preco: 2310.90
-  };
-  */
   product: Product = {
     id: null,
     descricao: "",
@@ -28,14 +21,15 @@ export class ProductCreateComponent implements OnInit {
 
 
   constructor(private productService: ProductService,
-    private router: Router) { }
+              private router: Router,
+              private coreService: CoreService) { }
 
   ngOnInit(): void {
   }
 
   createProduct(): void {
     this.productService.create(this.product).subscribe(() => {
-      this.productService.showMessage("Produto criado com sucesso!")
+      this.coreService.showMessage("Produto criado com sucesso!")
       this.router.navigate(['/products'])
     })
 

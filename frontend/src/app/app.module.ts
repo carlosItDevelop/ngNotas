@@ -20,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './views/home/home.component';
 
-import { RedDirective } from './directives/red.directive';
+import { RedDirective } from './shared/directives/red.directive';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductCrudComponent } from './components/product/product-crud/product-crud.component';
 
