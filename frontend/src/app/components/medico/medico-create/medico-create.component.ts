@@ -1,7 +1,9 @@
+import { CoreService } from './../../../shared/services/core.service';
 import { MedicoService } from './../../services/medico.service';
 import { Component, OnInit } from '@angular/core';
 import { Medico } from 'src/app/models/medico.model';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-medico-create',
@@ -19,14 +21,14 @@ export class MedicoCreateComponent implements OnInit {
   };
 
   constructor(private medicoService: MedicoService,
-    private router: Router) { }
+    private router: Router, private coreService: CoreService) { }
 
   ngOnInit(): void {
   }
 
   createMedico(): void {
     this.medicoService.create(this.medico).subscribe(() => {
-      this.medicoService.showMessage("Médico criado com sucesso!")
+      this.coreService.showMessage("Médico criado com sucesso!")
       this.router.navigate(['/medicos'])
     })
   }

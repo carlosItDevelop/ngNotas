@@ -1,3 +1,4 @@
+import { CoreService } from './../../shared/services/core.service';
 
 import { Paciente } from '../../models/paciente.model';
 import { Injectable } from '@angular/core';
@@ -15,18 +16,9 @@ export class PacienteService {
 
   constructor(
     private snackBar: MatSnackBar,
-    private http: HttpClient
+    private http: HttpClient,
+    private coreService: CoreService
   ) { }
-
-  showMessage(msg: string, isError: boolean = false): void {
-    this.snackBar.open(msg, 'X', {
-      duration: 4000,
-      horizontalPosition: "right",
-      verticalPosition: "top",
-      panelClass: isError ? ['msg-error'] : ['msg-success']
-    })
-  }
-
 
   create(paciente: Paciente): Observable<Paciente> {
     return this.http.post<Paciente>(this.baseUrl, paciente).pipe(
@@ -68,7 +60,7 @@ export class PacienteService {
   }
 
   erroHandler(e: any): Observable<any> {
-    this.showMessage('Ocorreu um erro inesperado!', true)
+    this.coreService.showMessage('Ocorreu um erro inesperado!', true)
     return EMPTY
   }
 

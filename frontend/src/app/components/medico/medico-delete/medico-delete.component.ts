@@ -1,7 +1,9 @@
+import { CoreService } from './../../../shared/services/core.service';
 import { MedicoService } from '../../services/medico.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Medico } from '../../../models/medico.model';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-medico-delete',
@@ -10,11 +12,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedicoDeleteComponent implements OnInit {
 
-  medico: Medico
+  medico: Medico = 
+  {
+    id: null,
+    nome: "",
+    especialidade: "",
+    crm: ""
+  };
+
+  //medico: Medico
 
   constructor(private router: Router,
     private route: ActivatedRoute,
-    private medicoService: MedicoService
+    private medicoService: MedicoService,
+    private coreService: CoreService
   ) { }
 
   ngOnInit(): void {
@@ -26,7 +37,7 @@ export class MedicoDeleteComponent implements OnInit {
 
   deleteMedico(): void {
     this.medicoService.delete(this.medico.id).subscribe(() => {
-      this.medicoService.showMessage('Médico excluído com sucesso!', true)
+      this.coreService.showMessage('Médico excluído com sucesso!', true)
       this.router.navigate(['/medicos'])
     })
   }

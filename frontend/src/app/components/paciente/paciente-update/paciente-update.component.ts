@@ -1,3 +1,4 @@
+import { CoreService } from './../../../shared/services/core.service';
 import { Paciente } from './../../../models/paciente.model';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -11,12 +12,20 @@ import { PacienteService } from '../../services/paciente.service';
 })
 export class PacienteUpdateComponent implements OnInit {
 
-  paciente: Paciente
+  paciente: Paciente = {
+    id: null,
+    nome: "",
+    cpf: "",
+    estado: ""
+  };
+
+  //paciente: Paciente
 
   constructor(
     private pacienteService: PacienteService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private coreService: CoreService
   ) { }
 
   ngOnInit(): void {
@@ -28,7 +37,7 @@ export class PacienteUpdateComponent implements OnInit {
 
   updatePaciente(): void {
     this.pacienteService.update(this.paciente).subscribe(() => {
-      this.pacienteService.showMessage('Paciente atualizado com sucesso!')
+      this.coreService.showMessage('Paciente atualizado com sucesso!')
       this.router.navigate(['/pacientes'])
     })
   }

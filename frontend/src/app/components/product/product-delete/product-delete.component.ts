@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../../../models/product.model';
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-product-delete',
   templateUrl: './product-delete.component.html',

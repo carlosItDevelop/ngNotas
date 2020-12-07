@@ -1,7 +1,9 @@
+import { CoreService } from './../../../shared/services/core.service';
 import { Component, OnInit } from '@angular/core';
 import { PacienteService } from '../../services/paciente.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Paciente } from '../../../models/paciente.model';
+
 
 @Component({
   selector: 'app-paciente-delete',
@@ -10,11 +12,19 @@ import { Paciente } from '../../../models/paciente.model';
 })
 export class PacienteDeleteComponent implements OnInit {
 
-  paciente: Paciente
+  paciente: Paciente = {
+    id: null,
+    nome: "",
+    cpf: "",
+    estado: ""
+  };
+
+  //paciente: Paciente
 
   constructor(private router: Router,
     private route: ActivatedRoute,
-    private pacienteService: PacienteService
+    private pacienteService: PacienteService,
+    private coreService: CoreService
   ) { }
 
   ngOnInit(): void {
@@ -26,7 +36,7 @@ export class PacienteDeleteComponent implements OnInit {
 
   deletePaciente(): void {
     this.pacienteService.delete(this.paciente.id).subscribe(() => {
-      this.pacienteService.showMessage('Paciente excluído com sucesso!', true)
+      this.coreService.showMessage('Paciente excluído com sucesso!', true)
       this.router.navigate(['/pacientes'])
     })
   }
