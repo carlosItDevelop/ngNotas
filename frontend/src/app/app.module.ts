@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 
@@ -53,6 +54,9 @@ import { PacienteReadComponent } from './components/paciente/paciente-read/pacie
 import { PacienteCreateComponent } from './components/paciente/paciente-create/paciente-create.component';
 import { PacienteUpdateComponent } from './components/paciente/paciente-update/paciente-update.component';
 import { PacienteDeleteComponent } from './components/paciente/paciente-delete/paciente-delete.component';
+import { DataPipe } from './shared/pipes/data.pipe';
+
+
 
 registerLocaleData(localePt);
 
@@ -79,7 +83,8 @@ registerLocaleData(localePt);
     PacienteReadComponent,
     PacienteCreateComponent,
     PacienteUpdateComponent,
-    PacienteDeleteComponent
+    PacienteDeleteComponent,
+    DataPipe
   ],
   imports: [
     BrowserModule,

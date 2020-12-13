@@ -1,3 +1,5 @@
+import { EstPaciente } from './../../../models/estPaciente.model';
+import { EstadoPacienteService } from './../../../shared/services/estado-paciente.service';
 import { CoreService } from './../../../shared/services/core.service';
 import { Component, OnInit } from '@angular/core';
 import { PacienteService } from '../../services/paciente.service';
@@ -19,12 +21,18 @@ export class PacienteCreateComponent implements OnInit {
     estado: ""
   };
 
+  estados: EstPaciente[];
+
 
   constructor(private pacienteService: PacienteService,
               private router: Router,
-              private coreService: CoreService) { }
+              private coreService: CoreService, private estadoPacienteService: EstadoPacienteService) { }
 
   ngOnInit(): void {
+    this.estadoPacienteService.read().subscribe(estados => {
+      this.estados = estados;
+      console.log(estados);
+    })
   }
 
   createPaciente(): void {
@@ -32,7 +40,6 @@ export class PacienteCreateComponent implements OnInit {
       this.coreService.showMessage("Paciente criado com sucesso!")
       this.router.navigate(['/pacientes'])
     })
-
   }
 
   cancel(): void {
