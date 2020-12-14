@@ -3,6 +3,8 @@ import { Paciente } from './../../../models/paciente.model';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PacienteService } from '../../services/paciente.service';
+import { EstPaciente } from 'src/app/models/estPaciente.model';
+import { EstadoPacienteService } from 'src/app/shared/services/estado-paciente.service';
 
 
 @Component({
@@ -19,20 +21,24 @@ export class PacienteUpdateComponent implements OnInit {
     estado: ""
   };
 
-  //paciente: Paciente
+  estados: EstPaciente[];
 
   constructor(
     private pacienteService: PacienteService,
     private router: Router,
     private route: ActivatedRoute,
-    private coreService: CoreService
+    private coreService: CoreService, private estadoPacienteService: EstadoPacienteService
   ) { }
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id')
     this.pacienteService.readById(id).subscribe(paciente => {
       this.paciente = paciente
-    })
+    });
+    this.estadoPacienteService.read().subscribe(estados => {
+      this.estados = estados;
+      console.log(estados);
+    });
   }
 
   updatePaciente(): void {

@@ -5,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
 import { PacienteService } from '../../services/paciente.service';
 import { Router } from '@angular/router';
 import { Paciente } from '../../../models/paciente.model';
+import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+
 
 
 @Component({

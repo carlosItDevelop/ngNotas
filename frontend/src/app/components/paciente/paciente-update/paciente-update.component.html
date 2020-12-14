@@ -10,9 +10,13 @@
             <input matInput placeholder="CPF" [(ngModel)]="paciente.cpf" name="cpf">
         </mat-form-field>
 
-        <mat-form-field>
-            <input matInput placeholder="Estado do Paciente" [(ngModel)]="paciente.estado" name="estado">
-        </mat-form-field>
+
+
+        <select [(ngModel)]="paciente.estado" name="estado" id="estado" placeholder="Estado do Paciente">
+          <option *ngFor="let estpaciente of estados" [value]="estpaciente.descricao">{{ estpaciente.descricao }}</option>
+      </select>
+
+
 
     </form>
 
