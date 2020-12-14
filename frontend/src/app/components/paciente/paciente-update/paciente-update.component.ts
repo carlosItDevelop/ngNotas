@@ -23,6 +23,7 @@ export class PacienteUpdateComponent implements OnInit {
 
   estados: EstPaciente[];
 
+
   constructor(
     private pacienteService: PacienteService,
     private router: Router,

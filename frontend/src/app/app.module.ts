@@ -55,6 +55,7 @@ import { PacienteCreateComponent } from './components/paciente/paciente-create/p
 import { PacienteUpdateComponent } from './components/paciente/paciente-update/paciente-update.component';
 import { PacienteDeleteComponent } from './components/paciente/paciente-delete/paciente-delete.component';
 import { DataPipe } from './shared/pipes/data.pipe';
+import { MatSelectModule } from '@angular/material/select';
 
 
 
@@ -106,7 +107,8 @@ registerLocaleData(localePt);
     MatGridListModule,
     MatMenuModule,
     MatIconModule,
-    LayoutModule
+    LayoutModule,
+    MatSelectModule
   ],
   providers: [{
     provide: LOCALE_ID,

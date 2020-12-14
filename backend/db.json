@@ -60,9 +60,9 @@
     },
     {
       "id": 4,
-      "nome": "José Hernandes",
-      "cpf": "758.589.987-89",
-      "estado": "Em observação"
+      "nome": "Izabel Christina",
+      "cpf": "758.589.987-77",
+      "estado": "Estável"
     },
     {
       "id": 5,
@@ -72,9 +72,9 @@
     },
     {
       "id": 6,
-      "nome": "José Hernandes",
+      "nome": "Thiago Lifert",
       "cpf": "758.589.987-89",
-      "estado": "Crítico"
+      "estado": "Em observação"
     },
     {
       "id": 7,

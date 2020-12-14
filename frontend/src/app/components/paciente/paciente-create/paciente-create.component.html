@@ -13,16 +13,15 @@
 
 
 
-        <select [(ngModel)]="paciente.estado" name="estado" id="estado" placeholder="Estado do Paciente">
-                <option *ngFor="let estpaciente of estados" [value]="estpaciente.descricao">{{ estpaciente.descricao }}</option>
-            </select>
-
-        <!-- <mat-form-field appearance="fill">
+        <h4>Seleciona uma opção</h4>
+        <mat-form-field appearance="fill">
             <mat-label>Estado do Paciente</mat-label>
             <mat-select [(ngModel)]="paciente.estado" name="estado" id="estado">
-                <mat-option *ngFor="let estpaciente in estados" [value]="estpaciente.descricao">{{estpaciente.descricao}}</mat-option>
+                <mat-option *ngFor="let estpaciente of estados" [value]="estpaciente.descricao">
+                    {{ estpaciente.descricao }}
+                </mat-option>
             </mat-select>
-        </mat-form-field> -->
+        </mat-form-field>
 
         <p>You selected: {{paciente.estado}}</p>
 
