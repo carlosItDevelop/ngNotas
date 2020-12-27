@@ -1,4 +1,3 @@
-import { PacienteCrudComponent } from './components/paciente/paciente-crud/paciente-crud.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -13,6 +12,8 @@ import { MedicoCrudComponent } from './components/medico/medico-crud/medico-crud
 import { MedicoDeleteComponent } from './components/medico/medico-delete/medico-delete.component';
 import { MedicoUpdateComponent } from './components/medico/medico-update/medico-update.component';
 import { MedicoCreateComponent } from './components/medico/medico-create/medico-create.component';
+
+import { PacienteCrudComponent } from './components/paciente/paciente-crud/paciente-crud.component';
 import { PacienteCreateComponent } from './components/paciente/paciente-create/paciente-create.component';
 import { PacienteUpdateComponent } from './components/paciente/paciente-update/paciente-update.component';
 import { PacienteDeleteComponent } from './components/paciente/paciente-delete/paciente-delete.component';
@@ -70,7 +71,7 @@ const routes: Routes = [
   {
     path: "pacientes/delete/:id",
     component: PacienteDeleteComponent
-  }  
+  }
 ];
 
 @NgModule({

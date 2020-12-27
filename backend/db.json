@@ -50,7 +50,7 @@
       "id": 2,
       "nome": "Rosa Maria",
       "cpf": "858.989.878-98",
-      "estado": "Estável"
+      "estado": "Em observação"
     },
     {
       "id": 3,
@@ -92,7 +92,7 @@
       "id": 9,
       "nome": "José Fernandes",
       "cpf": "99999999999",
-      "estado": "Em observação"
+      "estado": "Estável"
     }
   ],
   "products": [

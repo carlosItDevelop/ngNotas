@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { CoreService } from './../../../shared/services/core.service';
 import { Paciente } from './../../../models/paciente.model';
 import { Component, OnInit } from '@angular/core';
@@ -21,7 +22,7 @@ export class PacienteUpdateComponent implements OnInit {
     estado: ""
   };
 
-  estados: EstPaciente[];
+  estados: EstPaciente[]
 
 
   constructor(
